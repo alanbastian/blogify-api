@@ -8,6 +8,17 @@
     "dev": "node src/index.js"
   },
   "dependencies": {
-    "express": "^4.18.2"
-  }
+    "express": "^4.21.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alanbastian/blogify-api.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alanbastian/blogify-api/issues"
+  },
+  "homepage": "https://github.com/alanbastian/blogify-api#readme"
 }
