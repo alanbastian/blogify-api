@@ -1,11 +1,23 @@
+// src/routes/posts.routes.js
 const express = require('express');
 const router = express.Router();
-const { getAllPosts, getPostById, posts } = require('../controllers/posts.controller');
 
-router.get('/', getAllPosts);
+// ✅ Import the whole controller object
+const postsController = require('../controllers/posts.controller');
 
+// GET /api/v1/posts
+router.get('/', postsController.getAllPosts);
 
-// dynamic route — uses controller
-router.get('/:postId', getPostById);
+// GET /api/v1/posts/:postId
+router.get('/:postId', postsController.getPostById);
+
+// POST /api/v1/posts
+router.post('/', postsController.createPost);
+
+// PUT /api/v1/posts/:postId
+router.put('/:postId', postsController.updatePost);
+
+// DELETE /api/v1/posts/:postId
+router.delete('/:postId', postsController.deletePost);
 
 module.exports = router;
